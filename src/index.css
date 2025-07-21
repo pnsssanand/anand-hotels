@@ -1,0 +1,256 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Premium Hotel Design System - Luxury Colors & Gradients */
+
+@layer base {
+  :root {
+    /* Core Brand Colors - Luxury Hotel Palette */
+    --background: 0 0% 100%;
+    --foreground: 210 24% 16%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 24% 16%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 24% 16%;
+
+    /* Primary - Deep Sapphire Blue */
+    --primary: 210 90% 20%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 210 85% 35%;
+    --primary-dark: 210 95% 15%;
+
+    /* Secondary - Warm Gold */
+    --secondary: 45 90% 60%;
+    --secondary-foreground: 210 24% 16%;
+    --secondary-light: 45 85% 70%;
+    --secondary-dark: 45 95% 45%;
+
+    /* Accent - Sophisticated Slate */
+    --accent: 210 16% 93%;
+    --accent-foreground: 210 24% 16%;
+
+    /* Neutral Tones */
+    --muted: 210 40% 96%;
+    --muted-foreground: 210 16% 46%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 95%;
+    --ring: 210 90% 20%;
+
+    /* Premium Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 90% 20%) 0%, hsl(210 85% 35%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(45 95% 45%) 0%, hsl(45 85% 70%) 100%);
+    --gradient-luxury: linear-gradient(135deg, hsl(210 95% 15%) 0%, hsl(210 90% 20%) 50%, hsl(45 90% 60%) 100%);
+    --gradient-hero: linear-gradient(rgba(33, 41, 60, 0.8), rgba(33, 41, 60, 0.4));
+    --gradient-overlay: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+
+    /* Shadows - Elegant & Refined */
+    --shadow-luxury: 0 20px 40px -12px hsl(210 90% 20% / 0.15);
+    --shadow-gold: 0 10px 30px -10px hsl(45 90% 60% / 0.3);
+    --shadow-soft: 0 4px 20px -2px hsl(210 24% 16% / 0.08);
+    --shadow-hover: 0 25px 50px -12px hsl(210 90% 20% / 0.25);
+
+    /* Animation & Transitions */
+    --transition-luxury: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Theme - Elegant Night Mode */
+    --background: 210 24% 8%;
+    --foreground: 210 20% 95%;
+
+    --card: 210 24% 10%;
+    --card-foreground: 210 20% 95%;
+
+    --popover: 210 24% 10%;
+    --popover-foreground: 210 20% 95%;
+
+    --primary: 210 85% 35%;
+    --primary-foreground: 210 24% 8%;
+    --primary-light: 210 80% 45%;
+    --primary-dark: 210 90% 25%;
+
+    --secondary: 45 85% 70%;
+    --secondary-foreground: 210 24% 8%;
+    --secondary-light: 45 80% 80%;
+    --secondary-dark: 45 90% 55%;
+
+    --muted: 210 24% 12%;
+    --muted-foreground: 210 16% 60%;
+
+    --accent: 210 24% 15%;
+    --accent-foreground: 210 20% 95%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 210 20% 95%;
+
+    --border: 210 24% 20%;
+    --input: 210 24% 15%;
+    --ring: 210 85% 35%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Premium Button Variants */
+  .btn-luxury {
+    @apply bg-gradient-to-r from-primary to-primary-light text-primary-foreground px-8 py-4 rounded-lg font-semibold shadow-luxury hover:shadow-hover transform hover:scale-105 transition-all duration-300;
+  }
+
+  .btn-gold {
+    @apply bg-gradient-to-r from-secondary-dark to-secondary text-secondary-foreground px-8 py-4 rounded-lg font-semibold shadow-gold hover:shadow-hover transform hover:scale-105 transition-all duration-300;
+  }
+
+  .btn-elegant {
+    @apply bg-white/10 backdrop-blur-sm text-white border border-white/20 px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300;
+  }
+
+  /* Luxury Card Styles */
+  .card-luxury {
+    @apply bg-white rounded-2xl shadow-luxury hover:shadow-hover transform hover:-translate-y-2 transition-all duration-500 overflow-hidden;
+  }
+
+  .card-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent;
+  }
+
+  /* Typography */
+  .heading-luxury {
+    @apply text-4xl md:text-6xl font-bold text-foreground leading-tight;
+  }
+
+  .heading-section {
+    @apply text-3xl md:text-4xl font-bold text-center mb-4;
+  }
+
+  .text-luxury {
+    @apply text-lg leading-relaxed text-muted-foreground;
+  }
+
+  /* Animations */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+
+  /* Hover Effects */
+  .hover-lift {
+    @apply transform hover:-translate-y-2 transition-all duration-300;
+  }
+
+  .hover-glow {
+    @apply hover:shadow-gold transition-all duration-300;
+  }
+
+  /* Glassmorphism */
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  .glass-dark {
+    @apply bg-black/20 backdrop-blur-md border border-white/10;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary-light));
+}
